@@ -1,0 +1,143 @@
+*{
+    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: url('slider.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Rubik', sans-serif, Arial, Helvetica;
+
+}
+body::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: #b292be5b;
+}
+.container{
+    display: flex;
+    z-index: 5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width:440px;
+    max-width:90%;
+    margin: 1.5% auto;
+}
+.heading{
+    background: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+    width: 100%;
+    border-radius: 5px;
+}
+.heading h3{
+    letter-spacing:5px;
+    font-weight: 700;
+    font-size: 28px;
+}
+.form{
+    padding: 30px 40px;
+    width:90%;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width:100%;
+    padding: 10px;
+    font-size: 14px;
+}
+input:focus{
+    outline: 2px solid #b292be2d;
+    padding:12px;
+}
+.form-control.success input{
+    border-color:#2ecc71;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+.form-control i{
+    position: absolute;
+    top:50%;
+    right:5%;
+    transform: translate(-1%, -50%);
+    visibility: hidden;
+}
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+.form-control small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+.form-control.success small{
+    visibility: visible;
+    color:#2ecc71;
+}
+.form-control.error small{
+    visibility: visible;
+    color:#e74c3c;
+}
+button{
+    background:#9b59b6;
+    border: 1px solid #9b59b6;
+    color:#fff;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    color: white;
+    top:100%;
+}
+footer a{
+    text-decoration: none;
+    color:#fff;
+}
+footer h5{
+    text-align: center;
+    color:#2ecc71;
+    font-size: 14px;
+}
+@media(max-width:400px){
+    .container{
+        max-width: 80%;
+        padding-bottom: 30px;
+        margin: 30px auto;
+    }
+    .form{
+        padding: 30px 5px;
+    }
+}
